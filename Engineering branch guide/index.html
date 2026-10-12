@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BranchFinder AI - An intelligent interactive engineering branch guidance system that analyzes your strengths, passions, and work styles to recommend your ideal engineering discipline.">
+  <title>BranchFinder AI — Engineering Career & Branch Navigator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Animated Ambient Gradients -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-logo" id="brand-logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">BranchFinder<span class="accent-badge">AI</span></span>
+          <span class="logo-sub">Engineering Navigator</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <button type="button" class="nav-btn active" data-tab="hero-tab" id="nav-home">Home</button>
+        <button type="button" class="nav-btn" data-tab="quiz-tab" id="nav-quiz">🎯 Career Quiz</button>
+        <button type="button" class="nav-btn" data-tab="chat-tab" id="nav-chat">💬 AI Counselor</button>
+        <button type="button" class="nav-btn" data-tab="explore-tab" id="nav-explore">🌐 Explore Branches</button>
+        <button type="button" class="nav-btn" data-tab="compare-tab" id="nav-compare">⚖️ Compare</button>
+      </nav>
+
+      <div class="nav-action">
+        <button type="button" class="btn btn-primary btn-sm" id="nav-cta-btn">Start Assessment</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+
+    <!-- TAB 1: HERO / HOME -->
+    <section class="tab-pane active" id="hero-tab">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span>2026 Next-Gen Engineering Guide</span>
+          </div>
+          <h1 class="hero-headline">
+            Find the <span class="gradient-text">Engineering Branch</span> That Truly Fits You.
+          </h1>
+          <p class="hero-subtext">
+            Don't choose your 4-year degree solely on hype. Match your authentic passions, favorite subjects, cognitive strengths, and career aspirations with our weighted algorithmic guide and AI Counselor.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary btn-glow" id="hero-start-quiz-btn">
+              <span>Take Assessment (2 mins)</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button type="button" class="btn btn-secondary" id="hero-open-chat-btn">
+              <span>Ask AI Counselor</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-num">12+</span>
+              <span class="stat-label">Engineering Fields</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-num">95%</span>
+              <span class="stat-label">Match Precision</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Free & Unbiased</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card-wrapper">
+            <div class="visual-card">
+              <img src="assets/hero.jpg" alt="Futuristic Engineering Disciplines Art" class="hero-image" id="hero-banner-img">
+              <div class="visual-badge float-top">
+                <span class="badge-icon">⚡</span>
+                <div>
+                  <strong>Weighted Scoring</strong>
+                  <small>Skills × Passions × Market</small>
+                </div>
+              </div>
+              <div class="visual-badge float-bottom">
+                <span class="badge-icon">🎓</span>
+                <div>
+                  <strong>Career Outlooks</strong>
+                  <small>Top Roles & Salaries</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Feature Cards -->
+      <section class="features-row">
+        <div class="feature-item">
+          <div class="feat-icon">🎯</div>
+          <h3>Intelligent Match Engine</h3>
+          <p>Multi-dimensional analysis considering your favorite subjects, hobby inclinations, and lifestyle goals.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feat-icon">💬</div>
+          <h3>Conversational AI Counselor</h3>
+          <p>Got doubts like <em>"CS vs AI?"</em> or <em>"I hate biology, what should I pick?"</em> Get instant clarity.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feat-icon">⚖️</div>
+          <h3>Side-by-Side Comparison</h3>
+          <p>Directly benchmark workload, coding requirements, career trajectory, and starting pay across any 2 branches.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feat-icon">📊</div>
+          <h3>Career Roadmaps</h3>
+          <p>Detailed insight into industry demand, core courses, emerging subfields, and top global recruiters.</p>
+        </div>
+      </section>
+    </section>
+
+    <!-- TAB 2: INTERACTIVE QUIZ / ASSESSMENT -->
+    <section class="tab-pane" id="quiz-tab">
+      <div class="quiz-container">
+        
+        <!-- Progress Bar -->
+        <div class="quiz-header">
+          <div class="quiz-progress-info">
+            <span class="step-counter" id="step-counter">Step 1 of 4</span>
+            <span class="step-title" id="step-title">Personal Profile</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progress-bar-fill" style="width: 25%;"></div>
+          </div>
+        </div>
+
+        <!-- Quiz Form Card -->
+        <div class="quiz-card glass-panel" id="quiz-card">
+
+          <!-- STEP 1: Basic Profile & Subjects -->
+          <div class="quiz-step active" id="step-1">
+            <h2 class="step-heading">Tell us about your background</h2>
+            <p class="step-desc">Let's personalize your assessment to give you actionable guidance.</p>
+
+            <div class="form-group">
+              <label for="student-name" class="form-label">What is your name?</label>
+              <input type="text" id="student-name" class="form-input" placeholder="e.g. Alex, Ridhi..." required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Which subjects do you genuinely enjoy or find interesting? <span class="subtext-pill">(Select multiple)</span></label>
+              <div class="chip-selector" id="subjects-selector">
+                <button type="button" class="chip-btn" data-value="maths">📐 Mathematics & Logic</button>
+                <button type="button" class="chip-btn" data-value="physics">⚡ Physics & Mechanics</button>
+                <button type="button" class="chip-btn" data-value="cs">💻 Computer Science & Coding</button>
+                <button type="button" class="chip-btn" data-value="electronics">🔌 Circuits & Electricity</button>
+                <button type="button" class="chip-btn" data-value="biology">🧬 Biology & Life Sciences</button>
+                <button type="button" class="chip-btn" data-value="chemistry">🧪 Chemistry & Materials</button>
+                <button type="button" class="chip-btn" data-value="drawing">🎨 Drawing, Design & 3D Art</button>
+                <button type="button" class="chip-btn" data-value="space">🚀 Astronomy & Space Sciences</button>
+              </div>
+            </div>
+
+            <div class="step-nav">
+              <div></div>
+              <button type="button" class="btn btn-primary" id="btn-next-1">Next: Your Interests &rarr;</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Interests & Passions -->
+          <div class="quiz-step" id="step-2">
+            <h2 class="step-heading">What excites you when building or solving?</h2>
+            <p class="step-desc">Select the problems, technologies, or hobbies you find yourself naturally drawn to.</p>
+
+            <div class="chip-selector multi-grid" id="interests-selector">
+              <button type="button" class="chip-btn interest-card" data-value="coding">
+                <span class="icon">💻</span>
+                <span class="title">Coding & Web/Apps</span>
+                <span class="desc">Software, websites, apps, algorithm puzzles</span>
+              </button>
+              <button type="button" class="chip-btn interest-card" data-value="ai">
+                <span class="icon">🤖</span>
+                <span class="title">AI & Data Science</span>
+                <span class="desc">Machine learning, chatbots, automation</span>
+              </button>
+              <button type="button" class="chip-btn interest-card" data-value="hardware">
+                <span class="icon">📟</span>
+                <span class="title">Chips & Microcontrollers</span>
+                <span class="desc">Arduino, IoT, semiconductors, sensors</span>
+              </button>
+              <button type="button" class="chip-btn interest-card" data-value="machines">
+                <span class="icon">⚙️</span>
+                <span class="title">Engines & Mechanical Systems</span>
+                <span class="desc">Vehicles, gears, 3D printing, aerodynamics</span>
+              </button>
+              <button type="button" class="chip-btn interest-card" data-value="structures">
+                <span class="icon">🏗️</span>
+                <span class="title">Buildings & Smart Cities</span>
+                <span class="desc">Architecture, bridges, infrastructure</span>
+              </button>
+              <button type="button" class="chip-btn interest-card" data-value="bio">
+                <span class="icon">🧬</span>
+                <span class="title">Biotech & Medical Tech</span>
+                <span class="desc">Genetics, health devices, prosthetics</span>
+              </button>
+              <button type="button" class="chip-btn interest-card" data-value="chemicals">
+                <span class="icon">🧪</span>
+                <span class="title">Chemicals & Clean Energy</span>
+                <span class="desc">Batteries, pharma, petroleum, green tech</span>
+              </button>
+              <button type="button" class="chip-btn interest-card" data-value="aerospace">
+                <span class="icon">✈️</span>
+                <span class="title">Aviation & Spacecraft</span>
+                <span class="desc">Drones, rockets, satellites, propulsion</span>
+              </button>
+              <button type="button" class="chip-btn interest-card" data-value="security">
+                <span class="icon">🛡️</span>
+                <span class="title">Cybersecurity & Networking</span>
+                <span class="desc">Ethical hacking, cloud systems, defense</span>
+              </button>
+              <button type="button" class="chip-btn interest-card" data-value="design">
+                <span class="icon">✏️</span>
+                <span class="title">UI/UX & Product Design</span>
+                <span class="desc">Ergonomics, aesthetic gadgets, sketching</span>
+              </button>
+            </div>
+
+            <div class="step-nav">
+              <button type="button" class="btn btn-secondary" id="btn-prev-2">&larr; Back</button>
+              <button type="button" class="btn btn-primary" id="btn-next-2">Next: Work Style &rarr;</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Work Style & Environment -->
+          <div class="quiz-step" id="step-3">
+            <h2 class="step-heading">How and where do you imagine working?</h2>
+            <p class="step-desc">Different engineering branches involve vastly different day-to-day environments.</p>
+
+            <div class="form-group">
+              <label class="form-label">Preferred primary work environment:</label>
+              <div class="selection-grid" id="env-selector">
+                <label class="radio-card">
+                  <input type="radio" name="work_env" value="desk" checked>
+                  <span class="radio-content">
+                    <span class="radio-icon">🖥️</span>
+                    <span class="radio-title">Tech Desk / Remote</span>
+                    <span class="radio-sub">High-end monitor setup, remote flexibility, office collaboration</span>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="work_env" value="lab">
+                  <span class="radio-content">
+                    <span class="radio-icon">🔬</span>
+                    <span class="radio-title">R&D Lab / Testing Rig</span>
+                    <span class="radio-sub">Oscilloscopes, microscopes, chemical hoods, clean rooms</span>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="work_env" value="workshop">
+                  <span class="radio-content">
+                    <span class="radio-icon">🏭</span>
+                    <span class="radio-title">Workshop / Factory Floor</span>
+                    <span class="radio-sub">Hands-on machinery, assembly plants, tooling, prototypes</span>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="work_env" value="field">
+                  <span class="radio-content">
+                    <span class="radio-icon">🚧</span>
+                    <span class="radio-title">Outdoor / Construction Field</span>
+                    <span class="radio-sub">Project sites, active construction, surveying, travel</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="step-nav">
+              <button type="button" class="btn btn-secondary" id="btn-prev-3">&larr; Back</button>
+              <button type="button" class="btn btn-primary" id="btn-next-3">Next: Career Goals &rarr;</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: Career Priorities -->
+          <div class="quiz-step" id="step-4">
+            <h2 class="step-heading">What is your top career priority?</h2>
+            <p class="step-desc">This helps tailor which branches will best fulfill your long-term roadmap.</p>
+
+            <div class="selection-grid" id="priority-selector">
+              <label class="radio-card">
+                <input type="radio" name="priority" value="salary" checked>
+                <span class="radio-content">
+                  <span class="radio-icon">💰</span>
+                  <span class="radio-title">Maximum Market Demand & Salary</span>
+                  <span class="radio-sub">High tech compensation, global placements, rapid hiring</span>
+                </span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="priority" value="innovation">
+                <span class="radio-content">
+                  <span class="radio-icon">💡</span>
+                  <span class="radio-title">Startup & Cutting-Edge Innovation</span>
+                  <span class="radio-sub">Creating brand new products, AI revolution, patenting tech</span>
+                </span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="priority" value="stability">
+                <span class="radio-content">
+                  <span class="radio-icon">🏛️</span>
+                  <span class="radio-title">Evergreen Stability & Core Industry</span>
+                  <span class="radio-sub">Infrastructure, government PSUs, essential manufacturing</span>
+                </span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="priority" value="research">
+                <span class="radio-content">
+                  <span class="radio-icon">🧪</span>
+                  <span class="radio-title">Scientific Discovery & Higher Studies</span>
+                  <span class="radio-sub">Master's / Ph.D., deep tech research, biotechnology, space</span>
+                </span>
+              </label>
+            </div>
+
+            <div class="step-nav">
+              <button type="button" class="btn btn-secondary" id="btn-prev-4">&larr; Back</button>
+              <button type="button" class="btn btn-primary btn-glow" id="btn-calculate">
+                <span>Calculate Best Matches</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 5: RESULTS SCREEN -->
+          <div class="quiz-step" id="step-results">
+            <div class="results-header">
+              <div class="results-badge">Analysis Complete 🎉</div>
+              <h2 class="results-name-heading" id="results-name-heading">Your Personalized Engineering Blueprint</h2>
+              <p class="results-sub" id="results-summary-text">Based on your subjects, passions, and preferences, here are your optimal branches ranked by affinity score.</p>
+              
+              <div class="results-toolbar">
+                <button type="button" class="btn btn-secondary btn-sm" id="btn-print-report">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                  <span>Print / Save PDF</span>
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm" id="btn-retake-quiz">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+                  <span>Retake Assessment</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dynamic Recommendation Cards Container -->
+            <div class="recommendations-container" id="recommendations-container">
+              <!-- Rendered via JavaScript -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: CONVERSATIONAL AI COUNSELOR -->
+    <section class="tab-pane" id="chat-tab">
+      <div class="chat-container">
+        
+        <div class="chat-sidebar glass-panel">
+          <h3>Counselor Topics</h3>
+          <p class="sidebar-help">Click any quick prompt or type your custom question:</p>
+          <div class="quick-prompts-list">
+            <button type="button" class="quick-prompt-btn" data-query="Which branch is better: Computer Science or AI & Data Science?">
+              💻 CS vs AI & Data Science?
+            </button>
+            <button type="button" class="quick-prompt-btn" data-query="I like maths and physics but not coding, what should I choose?">
+              📐 I like Maths/Physics, but not coding?
+            </button>
+            <button type="button" class="quick-prompt-btn" data-query="What is the difference between ECE and Electrical Engineering?">
+              🔌 ECE vs EEE differences?
+            </button>
+            <button type="button" class="quick-prompt-btn" data-query="What are the best branches for working in Robotics and Electric Vehicles?">
+              🤖 Robotics & EV career branches?
+            </button>
+            <button type="button" class="quick-prompt-btn" data-query="Is Aerospace Engineering too risky compared to Mechanical?">
+              🚀 Aerospace vs Mechanical?
+            </button>
+            <button type="button" class="quick-prompt-btn" data-query="Tell me about Biotechnology future scope and higher studies.">
+              🧬 Biotechnology scope & research?
+            </button>
+          </div>
+          <div class="counselor-tip">
+            <strong>💡 Pro Tip:</strong>
+            <p>Tell the counselor your favorite high school subjects and target salary/industry to get bespoke advice.</p>
+          </div>
+        </div>
+
+        <div class="chat-main glass-panel">
+          <div class="chat-header">
+            <div class="chat-avatar">🤖</div>
+            <div>
+              <div class="chat-bot-title">AI Branch Counselor</div>
+              <div class="chat-bot-status"><span class="pulse-dot"></span> Online & Ready</div>
+            </div>
+          </div>
+
+          <div class="chat-messages" id="chat-messages">
+            <div class="chat-msg bot">
+              <div class="msg-avatar">🤖</div>
+              <div class="msg-bubble">
+                <p>Hello! 👋 I'm your Engineering Branch Counselor. Choosing your college branch is one of the most exciting decisions of your academic life.</p>
+                <p>Ask me anything about syllabus difficulty, coding requirements, career prospects, or tell me your subjects and interests!</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="chat-input-bar" id="chat-form">
+            <input type="text" id="chat-user-input" class="chat-input" placeholder="Type your question (e.g. 'I love drawing and mechanics, which branch?') ..." autocomplete="off" required>
+            <button type="submit" class="btn btn-primary" id="chat-send-btn">
+              <span>Send</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 4: EXPLORE ALL BRANCHES -->
+    <section class="tab-pane" id="explore-tab">
+      <div class="explore-container">
+        
+        <div class="explore-header">
+          <h2>Engineering Disciplines Directory</h2>
+          <p>Browse full curriculum snapshots, core roles, difficulty levels, and average compensation.</p>
+          
+          <div class="explore-controls">
+            <div class="search-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" id="branch-search-input" placeholder="Search branches by keyword (e.g., coding, circuits, space, bio)...">
+            </div>
+
+            <div class="filter-pills" id="branch-category-filters">
+              <button type="button" class="pill-btn active" data-category="all">All Disciplines</button>
+              <button type="button" class="pill-btn" data-category="computing">Computing & AI</button>
+              <button type="button" class="pill-btn" data-category="electronics">Electronics & Hardware</button>
+              <button type="button" class="pill-btn" data-category="core">Mechanical & Core</button>
+              <button type="button" class="pill-btn" data-category="bio-chem">Bio & Chemical</button>
+              <button type="button" class="pill-btn" data-category="infra">Civil & Infrastructure</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="branches-grid" id="branches-grid">
+          <!-- Rendered via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 5: BRANCH COMPARATOR -->
+    <section class="tab-pane" id="compare-tab">
+      <div class="compare-container">
+        <div class="compare-header">
+          <h2>Branch Comparator ⚖️</h2>
+          <p>Compare two branches side-by-side to evaluate coursework, difficulty, salary potential, and day-to-day focus.</p>
+
+          <div class="compare-selectors">
+            <div class="select-wrapper">
+              <label for="compare-branch-1">Select Branch 1:</label>
+              <select id="compare-branch-1" class="form-select"></select>
+            </div>
+            <div class="vs-badge">VS</div>
+            <div class="select-wrapper">
+              <label for="compare-branch-2">Select Branch 2:</label>
+              <select id="compare-branch-2" class="form-select"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="compare-table-wrapper glass-panel" id="compare-table-container">
+          <!-- Rendered via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Detailed Branch Modal -->
+  <div class="modal-backdrop" id="branch-modal" aria-hidden="true">
+    <div class="modal-dialog glass-panel" role="dialog" aria-modal="true">
+      <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-body" id="modal-content">
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>BranchFinder AI &copy; 2026. Built with modern web engineering for aspiring tech leaders.</p>
+      <p class="footer-note">Remember: Select a branch that aligns with your innate strengths, curiosity, and adaptability!</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
